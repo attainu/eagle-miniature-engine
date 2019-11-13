@@ -1,40 +1,48 @@
 const express = require('express');
-const app = express();
+const exphbs = require('express-handlebars');
+const passportSetup = require('./config/passport-setup');
 const passport = require('passport');
-const FacebookStrategy = require('passport-facebook');
-const port = 3000;
+const mongoose = require('mongoose');
+const session = require('express-session');
+const Keys = require('./config/keys');
 
-var FACEBOOK_APP_ID = '426981531338869';
-var FACEBOOK_APP_SECRET = '1d97c4521d1877484ebbd40aa9ccc6ad';
-
-var fbOpts ={
-    clientID: FACEBOOK_APP_ID,
-    clientSecret: FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/callback"
-}
-
-var fbCallback = function(accessToken, refreshToken, profile, cb) {
-        
-}
-
-passport.use(new FacebookStrategy(fbOpts,fbCallback));
+const app = express();
 
 
+app.use(session({
+    name: "App-session",
+    secret: Keys.session.cookieKey,
+    resave:true,
+    saveUninitialized:true,
+    cookie:{
+        maxAge: 3*60*60*1000,
+    }
+}));
 
-app.get('/', passport.authenticate('facebook'));
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
 
-app.get('/auth/facebook/callback',(req,res)=>{
-    res.send("success");
+app.engine('.hbs',exphbs({extname:'.hbs'}));
+app.set('view engine','.hbs');
+
+const authRoute = require('./routes/auth-route');
+const appRoute = require('./routes/app-routes');
+
+//home route
+app.use('/',authRoute);
+
+//app routes
+app.use('/apps',appRoute);
+
+mongoose.connect('mongodb://localhost/test',{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection.once('open', function(){
+    console.log('Connection has been made');
+}).on('error', function(error){
+    console.log('error>>>',error);
 });
 
-//Below code to replace line 26-28 after further development
-/*app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-  });
-*/
-app.listen(port,()=>{
-    console.log('Application running on port 3000');
+
+app.listen(3000,function(){
+    console.log("App running on port 3000");
 });
