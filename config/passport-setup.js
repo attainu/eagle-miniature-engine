@@ -1,7 +1,7 @@
 const passport = require('passport');
 const FacebookStrategy = require('passport-facebook');
 const keys = require('./keys');
-const User = require('./../models/user-model');
+const User = require('./../models/User');
 
 passport.serializeUser((user,done)=>{
     done(null,user.id);
@@ -15,7 +15,7 @@ passport.deserializeUser((id,done)=>{
 
 
 passport.use(new FacebookStrategy({
-    
+
     // strategy options
     clientID: keys.facebook.appID,
     clientSecret: keys.facebook.appSecret,
@@ -42,4 +42,3 @@ passport.use(new FacebookStrategy({
     });
 
 }));
-
