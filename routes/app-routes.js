@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const authCheck = function(req, res, next) {
     if(!req.user){
         res.redirect('/');
@@ -7,9 +6,13 @@ const authCheck = function(req, res, next) {
         next();
     }
 };
-
 router.get('/', authCheck, function(req, res) {
-    res.send(req.user);
+    res.render('appTray');
 });
-
+router.get('/quotes', function (req, res) {
+    res.render('motivationalApp');
+});
+router.get('/pubgQuiz', function (req, res) {
+    res.render('pubgQuizApp');
+});
 module.exports = router;
