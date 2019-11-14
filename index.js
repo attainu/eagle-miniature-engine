@@ -30,6 +30,7 @@ app.use('/static', express.static('public'));
 app.engine('.hbs',exphbs({extname:'.hbs'}));
 app.set('view engine','.hbs');
 
+
 const authRoute = require('./routes/auth-route');
 const appRoute = require('./routes/app-routes');
 
@@ -38,6 +39,19 @@ app.use('/', authRoute);
 
 //app routes
 app.use('/apps', appRoute);
+
+// routes to appTray and all apps
+app.get('/appTray', function (req, res) {
+    res.render('appTray');
+});
+app.get('/quotes', function (req, res) {
+    res.render('motivationalApp');
+});
+app.get('/pubgQuiz', function (req, res) {
+    res.render('pubgQuizApp');
+});
+
+
 
 mongoose.connect('mongodb://localhost/test',{ useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', function(){

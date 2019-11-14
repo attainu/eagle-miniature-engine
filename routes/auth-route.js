@@ -4,7 +4,7 @@ const passport = require('passport');
 router.get('/', passport.authenticate('facebook'));
 
 router.get('/facebook/redirect', passport.authenticate('facebook'),function (req, res) {
-    res.redirect('/apps');
+    res.redirect('/appTray');
 });
 
 router.get('/logout',function(req,res){
