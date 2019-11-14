@@ -1,0 +1,74 @@
+
+[
+        {
+                "question": "What is the full form of your very own game PUBG ?",
+                "option": ["PlayerUnique Battlegrounds", "PlayerUnknown’s Battlegrounds", "Play Under Bombs and Granades", "Pray Urge Betray Gamble"],
+                "answer": "PlayerUnknown’s Battlegrounds"
+        },
+        {
+                "question": "What is the Maximum level of armor we got in PUBG ?",
+                "option": ["level1", "level5", "level3", "level4"],
+                "answer": "level3"
+        },
+        {
+                "question": "M416 takes which ammunition ?",
+                "option": ["5.56mm", "7.62mm", "9mm", "12 Guage"],
+                "answer": "5.56"
+        },
+        {
+                "question": "Which one of these is not a Map in PUBG ?",
+                "option": ["Vikendi", "Sanhok", "Erangel", "Jhumri Telaiya"],
+                "answer": "Jhumri Telaiya"
+        },
+        {
+                "question": "PAN is used in PUBG. ",
+                "option": ["to fry fish, that we find in the river", "to cover our Head", "its a Melee Weapon", "to collect extra Items"],
+                "answer": "its a Melee Weapon"
+        },
+        {
+                "question": "Which among these is a rank in PUBG ?",
+                "option": ["Diamond", "Silver", "Ace", "All of these"],
+                "answer": "All of these"
+        },
+        {
+                "question": "Which among these games, do similar to PUBG ?",
+                "option": ["Call Of Duty", "Subway Surfers", "Candy Crush Saga", "Need For Speed"],
+                "answer": "Call Of Duty"
+        },
+        {
+                "question": "PUBG game is developed by which of these companies ?",
+                "option": ["Microsoft", "Ubisoft", "Bluehole","EA Sports"],
+                "answer": "Bluehole"
+        },
+        {
+                "question": "What do you get after winning a game in PUBG?",
+                "option": ["Fruit Salad", "Fish Dinner", "Chicken Dinner", "Sandwich Breakfast"],
+                "answer": "Chicken Dinner"
+        },
+        {
+                "question": "What is the maximum number of players can enter into a squad ?",
+                "option": ["5", "4", "6", "2"],
+                "answer": "4"
+        },
+        {
+                "question": "Which is best Sniper Rifle ?",
+                "option": ["Mini14", "M24", "Kar98", "AWM"],
+                "answer": "AWM"
+        },
+        {
+                "question": "A hand-granade is used for ?",
+                "option": ["to cook for the chicken dinner", "to keep in your pocket", "to kill enemies","useless item"],
+                "answer": "to kill enemies"
+        },
+        {
+                "question": "Among these vehicle which one is not available in PUBG?",
+                "option": ["Dacia", "Buggy", "Motorcycle", "Bullock Cart"],
+                "answer": "Bullock Cart"
+        },
+        {
+                "question": "Why Helmet is used in PUBG ?",
+                "option": ["Traffic Rules", "It use as a Protection", "Looks cool", "I don't wear it"],
+                "answer": "It use as a Protection"
+        }
+        
+]
