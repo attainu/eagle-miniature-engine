@@ -23,6 +23,10 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+
+app.use(express.urlencoded({extended: true}));
+app.use('/static', express.static('public'));
+
 app.engine('.hbs',exphbs({extname:'.hbs'}));
 app.set('view engine','.hbs');
 
