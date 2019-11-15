@@ -21,7 +21,9 @@ Control.Quiz=function(req,res){
      if(error){
          return res.render({error:'Error,please reload or wait for sometime while the page reloads.Thank you!'});
      }
-     return res.render('Quiz',{});
+     return res.render('Quiz',{
+         
+     });
  });
 }
 

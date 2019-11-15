@@ -1,26 +1,7 @@
 AppLogic={};
 
 
-// var db=null;
-// var randomNumber = Math.floor( Math.random() * 15 );
-// const MongoClient=require('mongodb').MongoClient;
-// var url='mongodb://localhost:27017';
-// MongoClient.connect(url,function(error,client){
-//     if(error){
-//         throw Error;
-//     }
-//     db=client.db('');
-//     });
 
-//     var appCollection=db.collection('app');
-//     var quizCollection=db.collection('quiz');
-//     var insightsCollection=db.collection('insights');
-//     var usersCollection=db.collection('users');
-
-//     collection.find({}).toArray(function(error,response){
-//         console.log(response);
-//     });
-    
   
     AppLogic.quiz=function(cb){
 
@@ -38,21 +19,6 @@ AppLogic={};
     //       return cb(null, user);
     //     });
     //   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     // var doUpdate = function() {
