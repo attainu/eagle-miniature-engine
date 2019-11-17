@@ -5,9 +5,11 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const Keys = require('./config/keys');
+const PORT = 3000;
 
 const app = express();
 
+app.use(express.json());
 
 app.use(session({
     name: "App-session",
@@ -23,26 +25,39 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.engine('.handlebars',exphbs({extname:'.handlebars'}));
-app.set('view engine','.handlebars');
 
-const authRoute = require('./routes/auth-route');
-const appRoute = require('./routes/app-routes');
+app.use(express.urlencoded({extended: true}));
+app.use('/static', express.static('public'));
+
+app.engine('.hbs',exphbs({extname:'.hbs'}));
+app.set('view engine','.hbs');
+
+
+//const authRoute = require('./routes/auth-route');
+//const appRoute = require('./routes/app-routes');
 
 //home route
-app.use('/',authRoute);
+//app.use('/', authRoute);
 
 //app routes
-app.use('/apps',appRoute);
+//app.use('/apps', appRoute);
+
+//controller
+const controller = require('./controller/controller.js');
+app.get('/', controller.Question);
+app.post('/', controller.Question);
+app.get('/result', function(req, res){
+    res.render('result');
+})
+
 
 mongoose.connect('mongodb://localhost/test',{ useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.connection.once('open', function(){
-    console.log('Connection has been made');
+    console.log('Database is connected..');
+
+    app.listen(3000,function(){
+        console.log("App is running on port:", PORT);
+    });
 }).on('error', function(error){
-    console.log('error>>>',error);
-});
-
-
-app.listen(3000,function(){
-    console.log("App running on port 3000");
+    console.log('Failed to connect to database >>>>',error);
 });

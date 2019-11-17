@@ -1,38 +1,26 @@
 const router = require('express').Router();
 
-const authCheck = function(req, res, next) {
-    if(!req.user){
-        res.redirect('/');
-    } else {
-        next();
-    }
-};
+// const authCheck = function(req, res, next) {
+//     if(!req.user){
+//         res.redirect('/');
+//     } else {
+//         next();
+//     }
+// };
 
-router.get('/', authCheck, function(req, res) {
-    res.render('home.handlebars');
-});
 
-// Model
-    // const questionsModel = require('../public/pubg.json')
+// router.get('/', authCheck, function(req, res) {
+//     res.render('appTray');
+// });
 
-    // // Quiz API Routes (api/quiz/)
-    // router.get('/apps/all', (req, res, next) => {
+// router.get('/quotes',authCheck,function (req, res) {
+//     res.render('motivationalApp');
+// });
 
-    // req.render('quiz', {
+// router.get('/pubgQuiz',authCheck, function (req, res) {
+//     res.render('pubgQuizApp');
+// });
 
-    // })
-
-    // // Get All Questions
-    // questionsModel.find({}, function (err, items) {
-    // if (err) {
-    // console.log(err)
-    // res.json({ err: err })
-    // } else {
-    // res.json({ questions: items })
-    // }
-    // })
-
-    // })
 
 
 module.exports = router;
