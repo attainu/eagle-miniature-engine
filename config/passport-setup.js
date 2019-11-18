@@ -19,8 +19,7 @@ passport.use(new FacebookStrategy({
     // strategy options
     clientID: keys.facebook.appID,
     clientSecret: keys.facebook.appSecret,
-    callbackURL: '/facebook/redirect'
-
+    callbackURL: "/facebook/redirect",
     profileFields: ['id', 'displayName', 'name', 'photos', 'email', 'gender', 'link'],
     proxy: true
 },
@@ -51,5 +50,3 @@ passport.use(new FacebookStrategy({
             })
     }
 ));
-
-}));
