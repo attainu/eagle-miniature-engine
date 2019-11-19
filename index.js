@@ -41,13 +41,16 @@ app.use('/', authRoute);
 app.use('/apps', appRoute);
 
 
-mongoose.connect('mongodb://localhost/test',{ useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connection.once('open', function(){
-    console.log('Database is connected..');
+mongoose.connect(Keys.db.uri,{ useNewUrlParser: true, useUnifiedTopology: true });
+// mongoose.connection.once('open', function(){
+//     console.log('Database is connected..');
 
-    app.listen(3000,function(){
+//     app.listen(3000,function(){
+//         console.log("App is running on port:", PORT);
+//     });
+// }).on('error', function(error){
+//     console.log('Failed to connect to database >>>>',error);
+// });
+app.listen(3000,function(){
         console.log("App is running on port:", PORT);
-    });
-}).on('error', function(error){
-    console.log('Failed to connect to database >>>>',error);
-});
+ });
