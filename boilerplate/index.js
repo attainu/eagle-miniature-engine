@@ -1,42 +1,57 @@
-const express=require('express');
-const app=express();
-const port=9090;
-const exphbs=require('express-handlebars');
-const hbs = exphbs.create({
-	extname: '.hbs'
-});
-app.engine('.hbs',hbs.engine);
+
+
+
+const express = require('express');
+const exphbs = require('express-handlebars');
+const passportSetup = require('./config/passport-setup');
+const passport = require('passport');
+const mongoose = require('mongoose');
+const session = require('express-session');
+const Keys = require('./config/keys');
+const PORT = 3000;
+
+const app = express();
+
+app.use(session({
+    name: "App-session",
+    secret: Keys.session.cookieKey,
+    resave:true,
+    saveUninitialized:true,
+    cookie:{
+        maxAge: 3*60*60*1000,
+    }
+}));
+
+//initialize passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+app.use(express.urlencoded({extended: true}));
+app.use('/static', express.static('public'));
+
+app.engine('.hbs',exphbs({extname:'.hbs'}));
 app.set('view engine','.hbs');
 
-app.use(express.json());
+
+const authRoute = require('./routes/auth-route');
+const appRoute = require('./routes/app-routes');
+
+//home route
+app.use('/', authRoute);
+
+//app routes
+app.use('/apps', appRoute);
 
 
+mongoose.connect('mongodb://localhost/test',{ useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connection.once('open', function(){
+    console.log('Database is connected..');
 
-const db=require('./models/index.js');
-
-
-
-const Control=require('./controllers/dbController.js');
-
-
-app.post('/quotes',Control.create);
-
-app.get('/quotes',Control.retrieve);
-
-db.connect()
-.then(function(){
-    console.log('Connected to DB');
-    app.listen(port,function(){
-        console.log('The app started on port: ',port);
-        }).on('error',function(){
-        console.log('Error loading!');
-        });
-
-        
-})
-.catch(function(error){
-    console.log('DB connection failed!');
-})
-
-
+    app.listen(3000,function(){
+        console.log("App is running on port:", PORT);
+    });
+}).on('error', function(error){
+    console.log('Failed to connect to database >>>>',error);
+});
 
