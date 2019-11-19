@@ -1,3 +1,6 @@
+
+
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const passportSetup = require('./config/passport-setup');
@@ -51,3 +54,4 @@ mongoose.connection.once('open', function(){
 }).on('error', function(error){
     console.log('Failed to connect to database >>>>',error);
 });
+
