@@ -1,0 +1,53 @@
+<body class="motive">
+        <center>
+            <div class="header">
+                 <nav class="navbar navbar-light bg-light">
+                    <span class="headspan">
+                        <a class="navbar-brand" href="#">
+                            <img src="/static/images/applogoimg.jpg" width="30" height="30" class="d-inline-block align-top" alt="applogo">
+                            CheapThrills.com
+                        </a>
+                    </span>
+                </nav>
+            </div> 
+            <br>
+
+            <div class="ad">
+                <!-- advertisement -->
+            </div>
+
+            <br>
+            <div class="first">
+                <div class="mb-1">
+                    <span class="span7"> Don't miss this out</span>
+                </div>
+                <div class="mb-1"> 
+                     <span class="span8">life changing quote you need to hear <span class="span9">NOW</span> is  </span>
+                </div>
+                <div class="mb-1">
+                    <form action="/quotes" method='get'>
+                    <span >
+                        <button type="submit" class="btn btn-primary">Find my Quote</button>
+                    </span>
+                    </form>
+                </div>
+            </div>
+            <br>
+
+            <div class="quote">
+                
+                {{quote}}
+            </div>
+            <br>
+            <div class="second">
+                <div class="mb-1">
+                    <span class="span10">Share it with your friends</span>
+                </div>
+                <div class="mb-1">
+                    <form action="<to the route>" method='get'>
+                    <button type="submit" class="btn btn-primary">Share Now</button>
+                </form>
+                </div>
+            </div>
+        </center>
+    </body>
