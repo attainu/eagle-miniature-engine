@@ -6,10 +6,10 @@ const Quotes=require('../models/QuotesModel.js');
 var collection=require('.././data/quotes.json');
 
 
-
+Quotes.collection.insertMany(collection);
 
 dbController.retrieve=function(req,res){
-    Quotes.collection.insert(collection);
+    
     
     Quotes.find({},function(error,result)
         {
