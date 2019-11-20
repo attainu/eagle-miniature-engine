@@ -50,7 +50,7 @@ app.use('/apps', appRoute);
 mongoose
     .connect(Keys.db.uri,{ useNewUrlParser: true, useUnifiedTopology: true})
     .then(result => {
-        app.listen(PORT, function () {
+        app.listen(process.env.PORT || PORT, function () {
             console.log("App is running on port:", PORT);
         });
     })
