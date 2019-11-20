@@ -13,7 +13,7 @@ router.get('/', authCheck, function(req, res) {
 });
 
 router.get('/quotes',authCheck,function (req, res) {
-    res.render('motivationalApp');
+    res.render('quotes');
 });
 
 router.get('/pubgQuiz',authCheck, function (req, res) {
