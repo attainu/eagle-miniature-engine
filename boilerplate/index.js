@@ -37,6 +37,7 @@ app.set('view engine','.hbs');
 const authRoute = require('./routes/auth-route');
 const appRoute = require('./routes/app-routes');
 
+
 //home route
 app.use('/', authRoute);
 
@@ -44,7 +45,9 @@ app.use('/', authRoute);
 app.use('/apps', appRoute);
 
 
-mongoose.connect(Keys.db.uri,{ useNewUrlParser: true, useUnifiedTopology: true });
+
+
+mongoose.connect('mongodb://localhost:27017/CheapThrills',{ useNewUrlParser: true, useUnifiedTopology: true });
 // mongoose.connection.once('open', function(){
 //     console.log('Database is connected..');
 

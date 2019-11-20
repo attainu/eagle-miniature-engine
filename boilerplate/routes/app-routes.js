@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const Control=require('../controllers/dbController.js');
+
 
 const authCheck = function(req, res, next) {
     if(!req.user){
@@ -12,9 +14,7 @@ router.get('/', authCheck, function(req, res) {
     res.render('appTray');
 });
 
-router.get('/quotes',authCheck,function (req, res) {
-    res.render('motivationalApp');
-});
+router.get('/quotes',authCheck,Control.retrieve);
 
 router.get('/pubgQuiz',authCheck, function (req, res) {
     res.render('pubgQuizApp');
