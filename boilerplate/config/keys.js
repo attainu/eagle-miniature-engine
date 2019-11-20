@@ -5,5 +5,8 @@ module.exports = {
     },
     session : {
         cookieKey: 'jfnvljisdnndnvlf'
+    },
+    db : {
+        uri : 'mongodb+srv://eagle-team4-app:cheapthrills12@cheapthrills-qicrg.mongodb.net/test?retryWrites=true&w=majority'
     }
 };
