@@ -6,26 +6,11 @@ const Quotes=require('../models/QuotesModel.js');
 var collection=require('.././data/quotes.json');
 
 
-dbController.create=function(req,res){
-var data=req.body;
 
- Quotes.collection.insert(collection,function(error,result)
-     {
-    if(error){
-        return res.json({
-        message:'Error creating the requested document!'
-    });
-}
-return res.json({
-    message:'Success!',
-    Data:result
-});
-});
-}
 
 dbController.retrieve=function(req,res){
     Quotes.collection.insert(collection);
-
+    
     Quotes.find({},function(error,result)
         {
        if(error){
@@ -38,6 +23,7 @@ dbController.retrieve=function(req,res){
         quote:result[randomNumber].quote
    });
    });
+   
    
 }
 
