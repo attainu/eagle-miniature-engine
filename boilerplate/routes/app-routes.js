@@ -14,7 +14,9 @@ router.get('/', authCheck, function(req, res) {
     res.render('appTray');
 });
 
+
 router.get('/quotes',authCheck,Control.retrieve);
+
 
 router.get('/pubgQuiz',authCheck, function (req, res) {
     res.render('pubgQuizApp');
