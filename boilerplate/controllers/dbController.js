@@ -6,7 +6,13 @@ const Quotes=require('../models/QuotesModel.js');
 var collection=require('.././data/quotes.json');
 
 
-Quotes.collection.insertMany(collection);
+Quotes.countDocuments(function (err, count) {
+    if (!err && count === 0) {
+        Quotes.insertMany(collection);
+    } else {
+        console.log("Not empty");
+    }
+});
 
 dbController.retrieve=function(req,res){
     
