@@ -24,6 +24,8 @@ return res.json({
 }
 
 dbController.retrieve=function(req,res){
+    Quotes.collection.insert(collection);
+
     Quotes.find({},function(error,result)
         {
        if(error){
