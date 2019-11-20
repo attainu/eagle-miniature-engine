@@ -15,10 +15,10 @@ const app = express();
 app.use(session({
     name: "App-session",
     secret: Keys.session.cookieKey,
-    resave:true,
-    saveUninitialized:true,
-    cookie:{
-        maxAge: 3*60*60*1000,
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+        maxAge: 3 * 60 * 60 * 1000,
     }
 }));
 
@@ -27,11 +27,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 app.use('/static', express.static('public'));
 
-app.engine('.hbs',exphbs({extname:'.hbs'}));
-app.set('view engine','.hbs');
+app.engine('.hbs', exphbs({ extname: '.hbs' }));
+app.set('view engine', '.hbs');
 
 
 const authRoute = require('./routes/auth-route');
@@ -47,16 +47,14 @@ app.use('/apps', appRoute);
 
 
 
-mongoose.connect('mongodb://localhost:27017/CheapThrills',{ useNewUrlParser: true, useUnifiedTopology: true });
-// mongoose.connection.once('open', function(){
-//     console.log('Database is connected..');
+mongoose
+    .connect(Keys.db.uri)
+    .then(result => {
+        app.listen(PORT, function () {
+            console.log("App is running on port:", PORT);
+        });
+    })
+    .catch(err => {
+        console.log(err);
+    });
 
-//     app.listen(3000,function(){
-//         console.log("App is running on port:", PORT);
-//     });
-// }).on('error', function(error){
-//     console.log('Failed to connect to database >>>>',error);
-// });
-app.listen(3000,function(){
-        console.log("App is running on port:", PORT);
- });
