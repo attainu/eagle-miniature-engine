@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const Control=require('../controllers/dbController.js');
-
+const QControl=require('../controllers/qController.js');
 
 const authCheck = function(req, res, next) {
     if(!req.user){
@@ -18,8 +18,8 @@ router.get('/', authCheck, function(req, res) {
 router.get('/quotes',authCheck,Control.retrieve);
 
 
-router.get('/pubgQuiz',authCheck, function (req, res) {
-    res.render('pubgQuizApp');
-});
+router.get('/pubgQuiz',authCheck,QControl.quizData);
+router.post('/pubgQuiz',authCheck,QControl.quizData);
+
 
 module.exports = router;
