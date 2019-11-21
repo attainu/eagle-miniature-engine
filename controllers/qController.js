@@ -37,11 +37,16 @@ Control.quizData = function(req, res){
                         
         })
         if(qstncount >20){
-                model.result(counter,function(error,data){
+               var n=counter; 
+             
+                model.result(n,function(error,data){
+                   
                     if(error){ return res.send('Error!'); }
+                    counter=0;
+                    qstncount=0;
                     
                 return res.render('result',{
-                    result:counter*5,
+                    result:n*5,
                     image:data
 
                 });
