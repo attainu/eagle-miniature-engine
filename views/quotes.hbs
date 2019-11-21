@@ -25,16 +25,18 @@
                      <span class="span8">life changing quote you need to hear <span class="span9">NOW</span> is  </span>
                 </div>
                 <div class="mb-1">
+                    <form method='get'>
                     <span >
-                        <input type="button" class="btn btn-primary" value="Share Now"> </input>
+                        <button type="submit" class="btn btn-primary">Get another Quote</button>
                     </span>
+                    </form>
                 </div>
             </div>
             <br>
 
             <div class="quote">
-                <!-- quote for you (text)-->
-                <!-- quote -->
+                
+                {{quote}}
             </div>
             <br>
             <div class="second">
@@ -42,7 +44,9 @@
                     <span class="span10">Share it with your friends</span>
                 </div>
                 <div class="mb-1">
-                    <input type="button" class="btn btn-primary" value="Share Now"> </input>
+                    <form action="<to the route>" method='get'>
+                    <button type="submit" class="btn btn-primary">Share Now</button>
+                </form>
                 </div>
             </div>
         </center>
