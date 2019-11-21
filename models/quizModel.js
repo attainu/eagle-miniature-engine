@@ -18,6 +18,7 @@ PUBG.Answerdata = function (cb) {
         }
 }
 PUBG.result = function (rank, cb) {
+        i = j = 0;
         if (rank >= 19) {
                 imgSrc = '/static/images/pubgConqueror.jpg';
 
