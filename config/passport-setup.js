@@ -24,7 +24,6 @@ passport.use(new FacebookStrategy({
     proxy: true
 },
     (accessToken, refreshToken, profile, done) => {
-        console.log(profile);
         User.findOne({ facebook: profile.id })
             .then((user) => {
                 if (user) {
@@ -37,7 +36,6 @@ passport.use(new FacebookStrategy({
                         lastname: profile.name.familyName,
                         image: `https://graph.facebook.com/${profile.id}/picture?type=large`
                     }
-                    console.log(newUser);
                     new User(newUser).save()
                         .then((user) => {
                             done(null, user);
