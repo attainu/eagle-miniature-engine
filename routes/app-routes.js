@@ -4,7 +4,8 @@ const QControl=require('../controllers/qController.js');
 
 const authCheck = function(req, res, next) {
     if(!req.user){
-        res.redirect('/');
+        req.session.returnTo = req.originalUrl; 
+        res.redirect('/login');
     } else {
         next();
     }

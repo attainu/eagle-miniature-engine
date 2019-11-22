@@ -2,13 +2,14 @@ const router = require('express').Router();
 const passport = require('passport');
 
 router.get('/', function(req, res){
-    res.render('homepage');
+    res.render('appTray');
 });
 
 router.get('/login', passport.authenticate('facebook'));
 
 router.get('/facebook/redirect', passport.authenticate('facebook'),function (req, res) {
-    res.redirect('/apps');
+   res.redirect(req.session.returnTo);
+   delete req.session.returnTo;
 });
 
 router.get('/logout',function(req,res){
