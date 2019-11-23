@@ -1,37 +1,20 @@
 <body class="pubgquiz">
         <center>
-            <div class="header">
-                <nav class="navbar navbar-dark bg-dark">
-                    <span class="headspan">
-                        <a class="navbar-brand" href="/apps">
-                            <img src="/static/images/applogoimg.jpg" width="30" height="30" class="d-inline-block align-top" alt="applogo">
-                            CheapThrills.com
-                        </a>
-                    </span>
-                </nav>
-            </div>
+            
             <br>
             <div class="ad">
                 <!--  ad -->
             </div>
             
-            <div class="share">
-                <div class="mb-2">
-                    <span class="span3"> Our site welcomes the khiladi of PUBG  </span>
-                </div>
-                <div class="mb-2">
-                    <span class="span3">enjoy playing this PUBG quiz  </span>
-                </div>
-                
-            </div>
+            
                 
                 
                 <div class="container my-5 shadow-lg w-50 rounded text-center" >
-                    <img src="/static/images/pubgback.jpg" alt= "PUBGimgs" class="img-fluid mx-auto w-100">
+                    <img src="/static/images/pubgback.jpg" alt= "PUBGimgs" class="img-fluid mx-auto w-100" style="padding-top: 12px;"
                 <br><br>
                 <div>
                     <h4>{{question}}</h4>
-                    <form method="POST" action="/apps/pubgQuiz">
+                    <form method="POST" action="/apps/pubgQuiz"><br>
                         <div>
                             <input type="submit" name = "opt" value = "{{option1}}" class = "btn btn-link btn-sm text-center text-success font-weight-bold" style = "text-decoration: none; !important">
                         <br><br>
@@ -45,7 +28,7 @@
                     </form>
                 </div>
                 </div>
-            <br>
+            
 <!--
             <div class="result mb-2">
                 your score result
