@@ -1,14 +1,87 @@
-<div class="row" style="display:inline-block">
-    <div class="col">
-        {{#each name}}
-        <p>{{this}}</p>
-        {{/each}}
-    </div>
-</div>
-<div class="row" style="display:inline-block">
-    <div class="col">
-        {{#each result}}
-        <p>{{this}}</p>
-        {{/each}}
-    </div>
-</div>
+<body class="nameApp">
+    <center>
+        <div class="header">
+            <nav class="navbar fixed-top navbar-dark bg-dark">
+                <span class="headspan">
+                    <a class="navbar-brand" href="/apps">
+                        <img src="/static/images/applogoimg.jpg" width="30" height="30" class="d-inline-block align-top"
+                            alt="applogo">
+                        CheapThrills.com
+                    </a>
+                </span>
+            </nav>
+        </div>
+        <br>
+
+        <div class="ad">
+            <!-- advertisement -->
+        </div>
+
+        <br>
+        <div class="first">
+            <div class="mb-1">
+                <span class="span7"> Don't miss this out</span>
+            </div>
+            <div class="mb-1">
+                <span class="span8">Share it now to your friends!</span>
+            </div>
+            <div class="mb-1">
+                <form method='get'>
+                    <span>
+                        <button onclick="location.reload()" type="submit" class="btn btn-primary">Share Now</button>
+                    </span>
+                </form>
+            </div>
+        </div>
+        <br>
+
+        <div class="result pt-5" id="tables">
+
+            <h1 class="text-center">Hey, {{this.name}}</h1>
+            <p>Here are the words which best discribes you</p>
+            <hr style="height:5px;">
+            <table class="table table-borderless text-white">
+                <tbody class="ml-5">
+                    {{#each output}}
+                    <tr class="mx-auto">
+                        <th scope="row">
+                            <h1 class="float-right text-uppercase">{{this.char}} -</h1>
+                        </th>
+                        <td scope="row" class="float-left">{{this.adj}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <br>
+        </div>
+        <div class="second">
+            <div class="mb-1">
+                <span class="span10">Share it with your friends</span>
+            </div>
+            <div class="mb-1">
+                <form action="<to the route>" method='get'>
+                    <button type="submit" class="btn btn-primary">Share Now</button>
+                </form>
+            </div>
+        </div>
+    </center>
+</body>
+
+<style>
+    td {
+        padding-top: 5px;
+    }
+
+    .result {
+        color: white;
+        height: 100%;
+        background: url("https://wallpaperplay.com/walls/full/c/f/2/107667.jpg")no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #tables {
+        margin: auto;
+        color: white;
+    }
+</style>
