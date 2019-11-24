@@ -98,24 +98,24 @@
 }
 
 .span5 {
-  font-family: serif;
+  
   font-variant: small-caps;
   border-radius: 15px;
   color: #173e3e;
 }
 
-.span6 {
-  font-family: serif;
-}
+
 
 .share {
+  font-family:'oxygen';
   border-radius: 5px;
   width: 80%;
   box-shadow: -1px 0px 18px 0px #4e4e4e36;
-  background-color: #fcfcfc;
-  background: space;
-  margin: 87px;
+  background-color: #a8a8a887;
+ 
+  margin: 30px;
   padding: 13px;
+  margin-top:20px
 }
 
 .pubgapp {
@@ -131,7 +131,7 @@
   font-size: 23px;
   font-weight: 350;
   padding: 33px;
-  background-color: #eaeaea;
+ 
 }
 
 .span7 {

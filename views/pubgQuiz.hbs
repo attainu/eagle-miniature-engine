@@ -1,16 +1,15 @@
 <body class="pubgquiz">
         <center>
             
-            <br>
+            <br><br>
             <div class="ad">
                 <!--  ad -->
             </div>
             
-                <div class="container-fluid my-5 shadow-lg w-50 rounded text-center" >
-                    <img src="/static/images/pubgback.jpg" alt= "PUBGimgs" class="img-fluid mx-auto w-100" style="padding-top: 12px;">
-                 <br><br>
+                <div class="container my-4 shadow-lg w-70 rounded text-center" style="background-image: url('/static/images/pubg.jpg'); " >
+                                     <br>
                 <div>
-                    <h4>{{question}}</h4><br>
+                    <h4 style="color: antiquewhite;">{{question}}</h4><br>
                     <form method="POST" action="/apps/pubgQuiz">
                         <div>
                             <input type="submit" name = "opt" value = "{{option1}}" class = "btn btn-link btn-sm text-center text-success font-weight-bold" style = "text-decoration: none; !important">
