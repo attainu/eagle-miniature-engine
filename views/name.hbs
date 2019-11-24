@@ -1,6 +1,6 @@
 <body class="nameApp">
     <center>
-        
+
         <br>
 
         <div class="ad">
@@ -13,12 +13,14 @@
                 <span class="span7"> Don't miss this out</span>
             </div>
             <div class="mb-1">
-                <span class="span8">Share it now to your friends!</span>
+                <span class="span8 d-block">Do you want to try any other name? Click the button below!</span>
+                <button type="button" class="btn btn-primary" id="new_name">Try it!</button>
             </div>
-            <div class="mb-1">
-                <form method='get'>
+            <div class="d-none" id="form">
+                <form method='get' action="/apps/name">
                     <span>
-                        <button onclick="location.reload()" type="submit" class="btn btn-primary">Share Now</button>
+                        <input type="text" name="newName" class="mr-3" required>
+                        <button type="submit" class="btn btn-success">Submit</button>
                     </span>
                 </form>
             </div>
@@ -73,5 +75,9 @@
     #tables {
         margin: auto;
         color: white;
+    }
+
+    input {
+        padding: 4px;
     }
 </style>
