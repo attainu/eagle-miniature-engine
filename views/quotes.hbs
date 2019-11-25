@@ -1,4 +1,4 @@
-<body class="motive">
+<body>
         <center>
            
             <br>
@@ -16,16 +16,16 @@
                      <span class="span8">life changing quote you need to hear <span class="span7">NOW</span> is  </span>
                 </div>
                 <div class="mb-1">
-                    <form method='get'>
-                    <span >
-                        <button onclick="location.reload()" type="submit" class="btn btn-primary">Get another Quote</button>
-                    </span>
-                    </form>
+                    
+                   
+                        <button id="change" class="btn btn-primary">Get another Quote</button>
+                    
+                    
                 </div>
             </div>
             <br>
 
-            <div class="quote" style="background-image: url('/static/images/quote.jpg');font-family: caveat brush;
+            <div class="quote" id='quote' style="background-image: url('/static/images/quote.jpg');font-family: caveat brush;
     color: #310505;">
                 
                 {{quote}}
@@ -42,4 +42,5 @@
                 </div>
             </div>
         </center>
+        
     </body>
