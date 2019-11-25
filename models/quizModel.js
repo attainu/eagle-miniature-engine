@@ -1,4 +1,4 @@
-PUBG = {};
+const PUBG = {};
 const pubgQuiz = require('./../data/quiz.json');
 const pubgAnswer = require('./../data/quizanswers.json');
 var i = 0;

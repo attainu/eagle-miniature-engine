@@ -1,83 +1,85 @@
+
 [
-    {
-            "question": "What is the full form of your very own game PUBG ?",
-            "option": ["PlayerUnique Battlegrounds", "PlayerUnknown’s Battlegrounds", "Play Under Bombs and Granades", "Pray Urge Betray Gamble"]
-    },
-    {
-            "question": "What is the Maximum level of armor we got in PUBG ?",
-            "option": ["level1", "level5", "level3", "level4"]
-    },
-    {
-            "question": "M416 takes which ammunition ?",
-            "option": ["5.56mm", "7.62mm", "9mm", "12 Guage"]
-    },
-    {
-            "question": "Which one of these is not a Map in PUBG ?",
-            "option": ["Vikendi", "Sanhok", "Erangel", "Jhumri Telaiya"]
-    },
-    {
-            "question": "PAN is used in PUBG. ",
-            "option": ["to fry fish, that we find in the river", "to cover our Head", "its a Melee Weapon", "to collect extra Items"]
-    },
-    {
-            "question": "Which among these is a rank in PUBG ?",
-            "option": ["Diamond", "Silver", "Ace", "All of these"]
-    },
-    {
-            "question": "Which among these games, do similar to PUBG ?",
-            "option": ["Call Of Duty", "Subway Surfers", "Candy Crush Saga", "Need For Speed"]
-    },
-    {
-            "question": "PUBG game is developed by which of these companies ?",
-            "option": ["Microsoft", "Ubisoft", "Bluehole","EA Sports"]
-    },
-    {
-            "question": "What do you get after winning a game in PUBG?",
-            "option": ["Fruit Salad", "Fish Dinner", "Chicken Dinner", "Sandwich Breakfast"]
-    },
-    {
-            "question": "What is the maximum number of players can enter into a squad ?",
-            "option": ["5", "4", "6", "2"]
-    },
-    {
-            "question": "Which is best Sniper Rifle ?",
-            "option": ["Mini14", "M24", "Kar98", "AWM"]
-    },
-    {
-            "question": "A hand-granade is used for ?",
-            "option": ["to cook for the chicken dinner", "to keep in your pocket", "to kill enemies","useless item"]
-    },
-    {
-            "question": "Among these vehicle which one is not available in PUBG?",
-            "option": ["Dacia", "Buggy", "Motorcycle", "Bullock Cart"]
-    },
-    {
-            "question": "Why Helmet is used in PUBG ?",
-            "option": ["Traffic Rules", "It use as a Protection", "Looks cool", "I don't wear it"]
-    },
-    {
-        "question": "What is the Red Zone?",
-        "option": ["An area that allows you to teleport yourself to any location on the map", "An area in which bombs randomly drop from the sky", "Looks cool", "I don't wear it"]
-},
-{
-        "question": "Do players outside the circular playzone die instantly.",
-        "option": ["you are dead right their", "you gain more health", "Health decreases gradually, leads to death", "I never been to the outside of playzone"]
-},
-{
-        "question": "What’s the maximum number of players that can participate in a match?",
-        "option": ["100", "50", "150", "90"]
-},
-{
-        "question": "How many maps are available in PUBG?",
-        "option": ["5", "6", "3", "4"]
-},
-{
-        "question": "Which one of these will heal you back to 100% ?",
-        "option": ["Bandages", "Adrenaline Syringe", "Med-kit", "First-Aid Kit"]
-},
-{
-        "question": "Airdrops in the game are made by…?",
-        "option": ["A zeppelin", "A helicopter", "An airplane", "A drone"]
-}
-] 
- 
+        {
+                "question": "What is the full-form of your very own game PUBG?",
+                "option": ["PlayerUnique Battlegrounds", "PlayerUnknown’s Battlegrounds", "Play Under Bombs and Granades", "Pray Urge Betray Gamble"]
+        },
+        {
+                "question": "What is the Maximum level of armor we got in PUBG?",
+                "option": ["Level1", "Level5", "Level3", "Level4"]
+        },
+        {
+                "question": "M416 takes which ammunition?",
+                "option": ["5.56mm", "7.62mm", "9mm", "12 Guage"]
+        },
+        {
+                "question": "Which one of these is not a Map in PUBG?",
+                "option": ["Vikendi", "Sanhok", "Erangel", "Jhumri Telaiya"]
+        },
+        {
+                "question": "Why PAN is used in PUBG?",
+                "option": ["To fry fish, that we find in the river", "To cover our Head", "It's a Melee Weapon", "To collect extra Items"]
+        },
+        {
+                "question": "A player is awarded as which of these ranks in PUBG?",
+                "option": ["Diamond", "Silver", "Ace", "All of these"]
+        },
+        {
+                "question": "Which among these games, do similar to PUBG?",
+                "option": ["Call Of Duty", "Subway Surfers", "Candy Crush Saga", "Need For Speed"]
+        },
+        {
+                "question": "This game is developed by which of the following company?",
+                "option": ["Activision", "Ubisoft", "Bluehole","EA Sports"]
+        },
+        {
+                "question": "What do you get after winning a game in PUBG?",
+                "option": ["Fruit Salad", "Fish Dinner", "Chicken Dinner", "Sandwich Breakfast"]
+        },
+        {
+                "question": "What is the maximum number of players can enter into a squad?",
+                "option": ["5", "4", "6", "2"]
+        },
+        {
+                "question": "Which is best Sniper Rifle?",
+                "option": ["Mini14", "M24", "Kar98", "AWM"]
+        },
+        {
+                "question": "A hand-granade is used for?",
+                "option": ["To cook for the chicken dinner", "To keep in your pocket", "To kill enemies","Useless item"]
+        },
+        {
+                "question": "Among these vehicle which one is not available in PUBG?",
+                "option": ["Dacia", "Buggy", "Motorcycle", "Bullock Cart"]
+        },
+        {
+                "question": "Why Helmet is used in PUBG?",
+                "option": ["Traffic Rules", "It use as a Protection", "Looks cool", "I don't wear it"]
+        },
+        {
+                "question": "What is the Red Zone?",
+                "option": ["Allows you to teleport yourself to any location on the map", "An area in which bombs randomly drop from the sky", "An area in which your HP goes back to 100 automatically", "A safe area in which you can’t be killed"]
+        },
+        {
+                "question": "Do players outside the circular playzone die instantly?",
+                "option": ["you are dead right their", "you gain more health", "Health decreases gradually, leads to death", "I never been to the outside of playzone"]
+        },
+        {
+                "question": "What’s the maximum number of players that can participate in a match?",
+                "option": ["100", "50", "150", "90"]
+        },
+        {
+                "question": "How many maps are available in PUBG?",
+                "option": ["5", "6", "3", "4"]
+        },
+        {
+                "question": "Which one of these will heal you back to 100% ?",
+                "option": ["Bandages", "Adrenaline Syringe", "Med-kit", "First-Aid Kit"]
+        },
+        {
+                "question": "Airdrops in the game are made by…?",
+                "option": ["A zeppelin", "A helicopter", "An airplane", "A drone"]
+        }
+        
+        
+]
