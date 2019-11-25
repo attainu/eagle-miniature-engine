@@ -7,6 +7,6 @@ module.exports = {
         cookieKey: 'jfnvljisdnndnvlf'
     },
     db : {
-        uri : 'mongodb+srv://socialmediaapp:581363266@cluster0-cp7v6.mongodb.net/test?retryWrites=true&w=majority'
+        uri : 'mongodb+srv://eagle-team4-app:cheapthrills12@cheapthrills-qicrg.mongodb.net/test?retryWrites=true&w=majority'
     }
 };

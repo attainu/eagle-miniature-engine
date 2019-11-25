@@ -1,5 +1,5 @@
+
 [
-    
         {
                 "answer":""
         },
@@ -43,13 +43,14 @@
                 "answer": "Bullock Cart"
         },
         {
+
                 "answer": "It use as a Protection"
         },
         {
                 "answer": "An area in which bombs randomly drop from the sky"
         },
         {
-                "answer": "Health decreases gradually, leads to death"
+                "answer": "Health decreases gradually, leads to death" 
         },
         {
                 "answer":"100"
@@ -63,4 +64,5 @@
         {
                 "answer":"An airplane"
         }
-    ]
+        
+]
