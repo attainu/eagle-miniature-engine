@@ -7,7 +7,7 @@ const ZControl = require('../controllers/zController.js');
 const authCheck = function (req, res, next) {
     if (!req.user) {
         req.session.returnTo = req.originalUrl;
-        res.redirect('/login');
+        res.render('login');
     } else {
         next();
     }
