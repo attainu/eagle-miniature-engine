@@ -50,11 +50,9 @@
             <div class="mb-1">
                 <span class="span10">Share it with your friends</span>
             </div>
-            <div class="mb-1">
-                <form action="<to the route>" method='get'>
-                    <button type="submit" class="btn btn-primary">Share Now</button>
-                </form>
-            </div>
+            {{#if frame}}
+                {{{frame}}}
+            {{/if}}
         </div>
     </center>
 </body>
