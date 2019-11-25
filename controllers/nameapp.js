@@ -63,7 +63,7 @@ controller.display = function (req, res) {
                 res.render('name', {
                     output: out,
                     name: output.querystring,
-                    frame: iframe
+                    frame: decodeURI(iframe)
                 });
             }
         })
