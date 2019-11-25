@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('#change').on('click', function () {
                $.ajax({
             method:"GET",
-            url:"../../../data/quotes.json",
+            url:"../data/quotes.json",
             
             success:function(quotes){
              var i = Math.floor(Math.random() * 109);
