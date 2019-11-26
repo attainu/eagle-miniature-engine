@@ -3,7 +3,7 @@ const Control = require('../controllers/dbController.js');
 const QControl = require('../controllers/qController.js');
 const nameController = require('../controllers/nameapp');
 const ZControl = require('../controllers/zController.js');
-
+const mistakeAppController = require('../controllers/mistakeController.js');
 const authCheck = function (req, res, next) {
     if (!req.user) {
         req.session.returnTo = req.originalUrl;
@@ -16,8 +16,6 @@ const authCheck = function (req, res, next) {
 router.get('/', authCheck, function (req, res) {
     res.render('appTray');
 });
-
-
 router.get('/quotes', authCheck, Control.retrieve);
 
 
@@ -30,4 +28,5 @@ router.post('/pubgQuiz', authCheck, QControl.quizData);
 
 router.get('/zodiacApp',authCheck,ZControl.fetchData);
 
+router.get('/biggestMistake', authCheck, mistakeAppController.mistake);
 module.exports = router;
