@@ -9,8 +9,9 @@
   font-family: sans-serif;
 }
 
+
 .header {
-  box-shadow: 14px -1px 18px #888888;
+  
   position: fixed;
   width: 100%;
 }
