@@ -1,54 +1,21 @@
 const Control = {};
 const model = require('../models/quizModel.js');
-var counter = 0;
-var qstncount = 0;
-var x;
-var y;
 Control.quizData = function (req, res) {
-        //Showing the Question and Answer on the Page
-        model.Qstndata(function (err, data) {
-                res.render('pubgQuiz', {
-                        question: data.question,
-                        option1: data.option[0],
-                        option2: data.option[1],
-                        option3: data.option[2],
-                        option4: data.option[3]
-                });
-        });
-        // Taking the value of the button clicked by the user
-        x = req.body.opt;
-        // Storing the answer in a variable
-        model.Answerdata(function (err, ansdata) {
-                y = ansdata.answer;
-                if (x === y) {
-                        counter++;
-                        qstncount++;
-                }
-                else {
-                        counter = counter;
-                        qstncount++;
-                }
+        if (req.body.correctAnswer === undefined) {
+                res.render('pubgQuiz');
+        }
+}
 
-        })
+Control.results = function(req, res) {
+        if (req.body.correctAnswer) {
+                model.result(req.body.correctAnswer, function (error, data) {
 
-        if(qstncount >20){
-               var n=counter; 
-             
-                model.result(n,function(error,data){
-                   
-                    if(error){ return res.send('Error!'); }
-                    counter=0;
-                    qstncount=0;
-                    
-                return res.render('result',{
-                    result:n*5,
-                    image:data
-
-
+                        if (error) { return res.send('Error!'); }
+                        return res.render('result', {
+                                result: req.body.correctAnswer * 10,
+                                image: data
                         });
                 });
         }
-
 }
-
 module.exports = Control;

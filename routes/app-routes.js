@@ -24,7 +24,7 @@ router.get('/name/:id', nameController.display);
 
 
 router.get('/pubgQuiz', authCheck, QControl.quizData);
-router.post('/pubgQuiz', authCheck, QControl.quizData);
+router.post('/pubgQuiz', authCheck, QControl.results);
 
 router.get('/zodiacApp',authCheck,ZControl.fetchData);
 

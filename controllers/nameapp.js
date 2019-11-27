@@ -7,12 +7,10 @@ var data = [];
 
 controller.retrieve = function (req, res) {
     var name;
-    console.log(req.query);
     if (req.query.newName)
         name = req.query.newName;
     else
         name = req.user.firstname;
-    console.log(req.query.newName, name);
     var nameArray = name.split('');
     for (var i = 0; i < nameArray.length; i++) {
         for (var j = 0; j < nameData.length; j++) {

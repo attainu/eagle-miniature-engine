@@ -18,29 +18,28 @@ PUBG.Answerdata = function (cb) {
         }
 }
 PUBG.result = function (rank, cb) {
-        i = j = 0;
-        if (rank >= 19) {
+        if (rank >= 9) {
                 imgSrc = '/static/images/pubgConqueror.jpg';
 
-        } else if (rank === 18) {
+        } else if (rank === 8) {
                 imgSrc = '/static/images/pubgAce.jpg';
 
-        } else if (rank === 16) {
+        } else if (rank === 7) {
                 imgSrc = '/static/images/pubgCrown.jpg';
 
         }
-        else if (rank === 14) {
+        else if (rank === 6) {
                 imgSrc = 'static/images/pubgDiamond.jpg';
 
         }
-        else if (rank === 12) {
+        else if (rank === 5) {
                 imgSrc = '/static/images/pubgPlatinum.jpg';
 
         }
-        else if (rank === 10) {
+        else if (rank === 4) {
                 imgSrc = '/static/images/pubgGold.jpg';
 
-        } else if (rank === 8) {
+        } else if (rank === 3) {
                 imgSrc = '/static/images/pubgSilver.jpg';
 
         }
