@@ -29,7 +29,8 @@ router.get('/name/:id', nameController.display);
 router.get('/pubgQuiz', authCheck, QControl.quizData);
 router.post('/pubgQuiz', authCheck, QControl.results);
 
-router.get('/zodiacApp',authCheck,ZControl.fetchData);
+router.get('/zodiacApp',authCheck,ZControl.showData);
+router.get('/zodiacResult/:z',authCheck,ZControl.fetchData);
 
 router.get('/biggestMistake', authCheck, mistakeAppController.mistake);
 module.exports = router;
