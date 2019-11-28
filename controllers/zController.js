@@ -10,13 +10,15 @@ Control.fetchData = function (req, res) {
         var Cdate = date.format(Tdate, 'DD MMM');
         var Fname = req.user.firstname;
         var Lname = req.user.lastname;
+        var Zname = req.params.id;
         //console.log(Cdate);
 
         Model.basket(function(err, data){
-                res.render('zodiacApp', {
+                res.render('zodiacResult', {
                         date: Cdate, 
                         FirstName: Fname,
                         LastName: Lname,
+                        Zname: Zname,
                         description: data.description
                 });
         })
