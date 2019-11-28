@@ -13,6 +13,17 @@ $(document).ready(function () {
             success: function (quotes) {
                 var i = Math.floor(Math.random() * 109);
                 $('#quote').html(quotes[i].quote);
+                var url = window.location.href;
+                $.ajax({
+                    method:'POST',
+                    url: url,
+                    data:{
+                        quote: quotes[i].quote
+                    },
+                    success: function(res){
+                        console.log("posted");
+                    }
+                });
 
             },
             error: function (error) {
