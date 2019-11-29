@@ -15,7 +15,7 @@ Control.fetchData = function (req, res) {
         var Cdate = date.format(Tdate, 'DD MMM');
         var Fname = req.user.firstname;
         var Lname = req.user.lastname;
-        var Zname = req.params.z;
+        var Zname = req.params.id;
         //console.log(Cdate);
 
         Model.basket(function(err, data){
