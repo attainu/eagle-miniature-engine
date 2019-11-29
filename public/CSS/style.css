@@ -209,3 +209,32 @@
   font-family: sans-serif;
 
 }
+
+.zodiacDIV{
+  background-image: linear-gradient(to top, 
+  #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);                       
+}
+
+.zodiacA {
+  text-decoration: none !important
+}
+
+.zodiacIMG{
+  width: 50px;
+  height: 50px;
+}
+
+.zodiacTEXT {
+  color: #fff;
+  font-family: Comic Sans MS;
+}
+
+.zodiacZOOM {
+  background-color: none;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.zodiacZOOM:hover {
+  transform: scale(1.5);
+}
