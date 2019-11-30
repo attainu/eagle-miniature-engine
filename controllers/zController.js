@@ -24,7 +24,9 @@ Control.fetchData = function (req, res) {
                         FirstName: Fname,
                         LastName: Lname,
                         Zname: Zname,
-                        description: data.description
+                        description: data.description,
+                        iframe:'<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fentertaining--apps.herokuapp.com%2Fapps%2FzodiacResult%2F' + Zname + '%23&layout=button&size=large&appId=473078063552105&width=77&height=28" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>'
+
                 });
         })
 
