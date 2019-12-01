@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars');
 const passportSetup = require('./config/passport-setup');
 const passport = require('passport');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 const session = require('express-session');
 const Keys = require('./config/keys');
 const PORT = 3000;
@@ -26,8 +27,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 app.use('/static', express.static('public'));
 
 app.engine('.hbs', exphbs({ extname: '.hbs' }));
@@ -48,7 +48,7 @@ app.use('/apps', appRoute);
 
 
 mongoose
-    .connect(Keys.db.uri,{ useNewUrlParser: true, useUnifiedTopology: true})
+    .connect(Keys.db.uri, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(result => {
         app.listen(process.env.PORT || PORT, function () {
             console.log("App is running on port:", PORT);

@@ -23,16 +23,17 @@ router.post('/quotes/:id', Control.post);
 
 router.get('/name', authCheck, nameController.retrieve);
 router.get('/name/:id', nameController.display);
+router.post('/name', nameController.store);
 
 
 
 router.get('/pubgQuiz', authCheck, QControl.quizData);
 router.post('/pubgQuiz', authCheck, QControl.results);
 
-router.get('/zodiacApp',authCheck,function(req, res){
+router.get('/zodiacApp', authCheck, function (req, res) {
     res.render('zodiacApp.hbs');
 });
-router.get('/zodiacResult/:id',ZControl.fetchData);
+router.get('/zodiacResult/:id', ZControl.fetchData);
 
 router.get('/biggestMistake', authCheck, mistakeAppController.mistake);
 module.exports = router;

@@ -7,8 +7,8 @@ Control.mistake = function (req, res) {
         console.log(req.user.image);
 
         res.render('biggestMistake', {
-                                dp: dp
-                        });
+                dp: dp
+        });
 
 
 };

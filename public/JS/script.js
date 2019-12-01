@@ -1,10 +1,6 @@
 $(document).ready(function () {
     var questions = null, questionNumber = 0, correctAns = 0;
 
-    $('#new_name').on('click', function () {
-
-        $('#form').removeClass("d-none");
-    });
     $('#change').on('click', function () {
         $.ajax({
             method: "GET",
@@ -15,12 +11,12 @@ $(document).ready(function () {
                 $('#quote').html(quotes[i].quote);
                 var url = window.location.href;
                 $.ajax({
-                    method:'POST',
+                    method: 'POST',
                     url: url,
-                    data:{
+                    data: {
                         quote: quotes[i].quote
                     },
-                    success: function(res){
+                    success: function (res) {
                         console.log("posted");
                     }
                 });
@@ -62,4 +58,26 @@ $(document).ready(function () {
         $('input[name=optradio]:checked').prop('checked', false);
         questionsDisplay(questionNumber);
     });
+    // // saveAs(canvas.toDataURL());
+    // var base64ImageContent = imgCanvas.replace(/^data:image\/(png|jpg);base64,/, "");
+    // var blob = base64ToBlob(base64ImageContent, 'image/png');
+    // console.log(Object.keys(blob));
+    // var formData = new FormData();
+    // // formData.append('picture', blob);
+    // formData.append('username', 'Chris');
+    // for (var pair of formData.entries()) {
+    //     console.log(pair[0] + ', ' + pair[1]);
+    // }
+    // $.post("/apps/name", { blob: blob, time: "2pm" });
+    // // $.ajax({
+    // //     url: "/apps/name",
+    // //     type: "POST",
+    // //     data: formData,
+    // //     cache: false,
+    // //     contentType: false,
+    // //     processData: false,
+    // // })
+    // //     .done(function (e) {
+    // //         console.log('done!');
+    // //     });
 });

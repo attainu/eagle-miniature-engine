@@ -17,6 +17,10 @@ const NameAppResultSchema = new Schema({
     result: {
         type: String,
         required: true
+    },
+    imgurl: {
+        type: String,
+        required: true
     }
 });
 

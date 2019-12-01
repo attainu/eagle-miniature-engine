@@ -6,50 +6,58 @@
         </div>
         <br>
         <br>
-        <div class="result pt-4" id="tables" style="font-family: oxygen;font-size:medium">
+        <div class="result pt-4 share" id="tables" style="font-family: oxygen;font-size:medium">
             <h1 class="text-center">Hey, {{this.name}}</h1>
             <p>Here are the words which best discribes you</p>
             <hr style="height:5px;">
             <table class="table table-borderless text-white">
                 <tbody class="ml-5">
                     {{#each output}}
-                    <tr class="mx-auto" >
+                    <tr class="mx-auto">
                         <th scope="row" class='align-middle'>
                             <h3 class="float-right text-uppercase">{{this.char}} -</h3>
                         </th>
-                        <th scope="row" class="float-left"><h3>{{this.adj}}</h3></th>
+                        <th scope="row" class="float-left">
+                            <h3>{{this.adj}}</h3>
+                        </th>
                     </tr>
                     {{/each}}
                 </tbody>
             </table>
             <br>
         </div>
-        <div class="second" style="margin-bottom: 80px;margin-top:25px ;background-color: #a8a8a887;padding-top:20px;height:max-content">
-            <div class="" style="display:inline-block;">
-                <button type="button" class="btn btn-primary" id="new_name">Try another!</button>
-            </div>
-            <div class="d-none" id="form" style="display:inline-block;">
-                <form method='get' action="/apps/name">
-                    <span>
-                        <input type="text" name="newName" class="mr-3" required>
-                        <button type="submit" class="btn btn-success" style="font-size: 14px;
-    height: 30px;">Submit</button>
-                    </span>
-                </form>
-            </div>
+
+        {{#if frame}}
+        <div class="second"
+            style="margin-bottom: 80px;margin-top:25px ;background-color: #a8a8a887;padding-top:20px;height:max-content">
             <div style="display:inline-block;padding-top:5px;width:113px;">
-                {{#if frame}}
-                    {{{frame}}}
-                {{/if}} 
+                <div class="" style="display:inline-block;">
+                    <button type="button" class="btn btn-primary" id="new_name">Try another!</button>
+                </div>
+                <div class="d-none" id="form" style="display:inline-block;">
+                    <form method='get' action="/apps/name">
+                        <span>
+                            <input type="text" name="newName" class="mr-3" required>
+                            <button type="submit" class="btn btn-success" style="font-size: 14px;
+    height: 30px;">Submit</button>
+                        </span>
+                    </form>
+                </div>
+
             </div>
-            
+            {{{frame}}}
+            {{/if}}
         </div>
     </center>
+    {{#if js}}
+    {{{js}}}
+    {{/if}}
 </body>
 <style>
     td {
         padding-top: 5px;
     }
+
     .result {
         color: white;
         height: 100%;
@@ -57,10 +65,12 @@
         background-size: cover;
         background-position: center;
     }
+
     #tables {
         margin: auto;
         color: white;
     }
+
     input {
         padding: 4px;
     }

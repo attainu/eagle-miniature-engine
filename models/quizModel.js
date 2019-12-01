@@ -21,25 +21,25 @@ PUBG.result = function (rank, cb) {
         if (rank >= 9) {
                 imgSrc = '/static/images/pubgConqueror.jpg';
 
-        } else if (rank === 8) {
+        } else if (rank == 8) {
                 imgSrc = '/static/images/pubgAce.jpg';
 
-        } else if (rank === 7) {
+        } else if (rank == 7) {
                 imgSrc = '/static/images/pubgCrown.jpg';
 
         }
-        else if (rank === 6) {
+        else if (rank == 6) {
                 imgSrc = 'static/images/pubgDiamond.jpg';
 
         }
-        else if (rank === 5) {
+        else if (rank == 5) {
                 imgSrc = '/static/images/pubgPlatinum.jpg';
 
         }
-        else if (rank === 4) {
+        else if (rank == 4) {
                 imgSrc = '/static/images/pubgGold.jpg';
 
-        } else if (rank === 3) {
+        } else if (rank == 3) {
                 imgSrc = '/static/images/pubgSilver.jpg';
 
         }
