@@ -5,8 +5,12 @@ const Model = require('../models/ZodiacModel.js');
 
 
 Control.showData = function (req, res) {
-      
-           return   res.render('zodiacApp');
+        res.locals.metaTags = { 
+                title: "Zodiac App ", 
+                description: "Find out what your zodiac sign says!!",
+                url: "https://entertaining--apps.herokuapp.com"+ req.originalUrl    
+        };
+        res.render('zodiacApp');
        
 };
 Control.fetchData = function (req, res) {
@@ -19,6 +23,11 @@ Control.fetchData = function (req, res) {
         //console.log(Cdate);
 
         Model.basket(function(err, data){
+                res.locals.metaTags = { 
+                        title: "Zodiac App ", 
+                        description: "Find out what your zodiac sign says!!",
+                        url: "https://entertaining--apps.herokuapp.com"+ req.originalUrl    
+                };
                 res.render('zodiacResult', {
                         date: Cdate, 
                         FirstName: Fname,

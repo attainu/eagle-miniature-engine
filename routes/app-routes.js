@@ -16,7 +16,7 @@ const authCheck = function (req, res, next) {
 router.get('/', authCheck, function (req, res) {
     res.render('appTray');
 });
-router.get('/quotes', authCheck, Control.retrieve);
+router.get('/quotes', authCheck,Control.retrieve);
 router.get('/quotes/:id', Control.display);
 router.post('/quotes/:id', Control.post);
 
@@ -31,6 +31,11 @@ router.get('/pubgQuiz', authCheck, QControl.quizData);
 router.post('/pubgQuiz', authCheck, QControl.results);
 
 router.get('/zodiacApp', authCheck, function (req, res) {
+    res.locals.metaTags = { 
+        title: "Zodiac App ", 
+        description: "Find out what your zodiac sign says!!",
+        url: "https://entertaining--apps.herokuapp.com"+ req.originalUrl    
+    };
     res.render('zodiacApp.hbs');
 });
 router.get('/zodiacResult/:id', ZControl.fetchData);

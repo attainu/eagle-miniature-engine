@@ -93,6 +93,11 @@ controller.display = function (req, res) {
                     out.push(outputs);
                 }
                 console.log(output);
+                res.locals.metaTags = { 
+                    title: "What's in a Name?", 
+                    description: "Find out some cool adjectives for you name!!",
+                    url: "https://entertaining--apps.herokuapp.com"+ req.originalUrl    
+                }; 
                 res.render('name', {
                     output: out,
                     name: output.querystring,
