@@ -29,7 +29,7 @@ PUBG.result = function (rank, cb) {
 
         }
         else if (rank == 6) {
-                imgSrc = 'static/images/pubgDiamond.jpg';
+                imgSrc = '/static/images/pubgDiamond.jpg';
 
         }
         else if (rank == 5) {
