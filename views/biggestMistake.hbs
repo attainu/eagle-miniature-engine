@@ -18,25 +18,21 @@
         </div>
 
 
-        <div class="mt-5" id="pic">
-            <div class="which">WHICH IS YOUR BIGGEST MISTAKE YOU LOVE DOING OVER AGAIN?</div>
+        <div class="" id="pic" style="margin-top: 5px;width:60%">
+            <div class="which">THE BIGGEST MISTAKE YOU LOVE DOING OVER AGAIN:</div>
             <div class="backimg" style="background: url('/static/images/backimg.jpg');">
-                <div class="userdp">
+                <div class="userdp"><br>
                     <table style="width: 100%;border-radius:7px">
-                        <tbody>
-                            <tr style="width: 100%;">
+                        <thead style="width: 100%;">
                                 <td style="width: 50%;">
                                     <img src="/static/images/facebook.png" alt="user dp" width='40%' class="centeralign"
                                         style="border: 3px solid;border-radius: 100%;border-color: #736b54;">
-                                </td>
+                                </td></thead>
+                        <tbody>
+                            
                                 <td style="width: 50%;">
                                     <table>
-                                        <tr>
-                                            <td>
-                                                <img src="/static/images/emoji.PNG" alt="emoji" width="40%"
-                                                    class="centeralign">
-                                            </td>
-                                        </tr>
+                                        
                                         <tr>
                                             <td style="padding: 10%;">
                                                 <span id="mistake">{{result}}</span>
@@ -53,19 +49,21 @@
 
         <br>
         {{#if js}}
-        <div class="share d-none" style="width:50%" id="share-btn">
+        <div class="share d-none" style="width:50%" id="share-btn" style="margin-top: 0px;">
+            
             <div class="mb-2">
-                <span class="span5"> Don't keep all the fun to yourself
-            </div>
-            <div class="mb-2">
-                <span class="span6">share this with your frnds</span>
+                <span class="span6">share this</span>
                 </span>
             </div>
             <div class="mb-2 fb-share">
-
+            {{{js}}}
+            {{/if}}
+            </div>
+        <div class="mb-2">
+                <span class="span5"> Don't keep all the fun to yourself
             </div>
         </div>
-        {{{js}}}
-        {{/if}}
+        
+        
     </center>
 </body>
