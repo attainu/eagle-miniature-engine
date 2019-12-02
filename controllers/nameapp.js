@@ -13,7 +13,7 @@ cloudinary.config({
     api_key: '567213951287329',
     api_secret: 'aKDu7VbWNwVdVgp962-J4h4-PFY'
 })
-function imageUpload(imgname, url) {
+function imageUpload(imgname, url, res) {
 
     console.log(url)
     cloudinary.uploader.upload(`${__dirname}/../public/images/ShareImages/${imgname}`, function (error, response) {
@@ -21,8 +21,9 @@ function imageUpload(imgname, url) {
         nameAppModel.findOneAndUpdate({ url: url }, { $set: { imgurl: response.secure_url } }, { useFindAndModify: false })
             .then(function (output) {
                 console.log(output);
-                fs.unlinkSync(`${__dirname}/../public/images/ShareImages/${imgname}`);
             })
+        res.send('Yes');
+        fs.unlinkSync(`${__dirname}/../public/images/ShareImages/${imgname}`);
     })
 
 }
@@ -118,12 +119,11 @@ controller.store = function (req, res) {
         }
     });
     if (!req.body.url) {
-        imageUpload(imgStamp, uniqueURL);
+        imageUpload(imgStamp, uniqueURL, res);
         uniqueURL = '';
     } else {
-        imageUpload(imgStamp, req.body.url)
+        imageUpload(imgStamp, req.body.url, res)
     }
-    res.send('Yes');
 }
 
 module.exports = controller; 

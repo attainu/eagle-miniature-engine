@@ -2,7 +2,6 @@ $(document).ready(function () {
     var newPage = true, share = false;
     var imgCanvas = "";
     $('#new_name').on('click', function () {
-
         $('#form').removeClass("d-none");
     });
     function makeid(length) {
@@ -26,6 +25,7 @@ $(document).ready(function () {
                 }
             }).done(function (o) {
                 console.log('saved');
+                $("#share-btn").removeClass("d-none");
             });
         })
     }

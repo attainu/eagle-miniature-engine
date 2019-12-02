@@ -10,6 +10,7 @@ $(document).ready(function () {
                 }
             }).done(function (o) {
                 console.log('saved');
+                $("#share-btn").removeClass("d-none");
             });
         })
     }
