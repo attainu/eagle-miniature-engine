@@ -41,26 +41,31 @@ dbController.retrieve = function (req, res) {
 
 }
 
-dbController.display = function(req, res){
+dbController.display = function (req, res) {
     var uniqueURL = req.params.id;
-    quoteResults.findOne({url : uniqueURL})
-    .then(function(output){
-        var iframe = '<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fentertaining--apps.herokuapp.com%2Fapps%2Fquotes%2F' + output.url + '%23&layout=button&size=large&appId=473078063552105&width=77&height=28" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>'
-        res.render('quotes',{
-            quote: output.quote,
-            iframe: iframe
+    quoteResults.findOne({ url: uniqueURL })
+        .then(function (output) {
+            var iframe = '<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fentertaining--apps.herokuapp.com%2Fapps%2Fquotes%2F' + output.url + '%23&layout=button&size=large&appId=473078063552105&width=77&height=28" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>'
+            res.locals.metaTags = { 
+                title: "Motivational Quotes ", 
+                description: "Some of the famous quotes throught history, find out and share it with your friends!",
+                url: "https://entertaining--apps.herokuapp.com"+ req.originalUrl    
+            };
+            res.render('quotes', {
+                quote: output.quote,
+                iframe: iframe
+            })
         })
-    })
 }
 
-dbController.post = function(req, res){
+dbController.post = function (req, res) {
     var uniqueURL = req.params.id;
     var quote = req.body.quote;
     console.log(quote);
-    quoteResults.findOneAndUpdate({url : uniqueURL},{$set:{quote:quote}},{useFindAndModify: false})
-    .then(function(output){
-        console.log(output.quote);
-    })
+    quoteResults.findOneAndUpdate({ url: uniqueURL }, { $set: { quote: quote } }, { useFindAndModify: false })
+        .then(function (output) {
+            console.log(output.quote);
+        })
 }
 
 module.exports = dbController;

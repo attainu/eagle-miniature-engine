@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const NameAppResultSchema = new Schema({
+const QuizAppResultSchema = new Schema({
     url: {
         type: String,
         required: true
@@ -10,12 +10,8 @@ const NameAppResultSchema = new Schema({
         type: String,
         required: true
     },
-    querystring: {
-        type: String,
-        required: true
-    },
     result: {
-        type: String,
+        type: Number,
         required: true
     },
     imgurl: {
@@ -24,5 +20,5 @@ const NameAppResultSchema = new Schema({
     }
 });
 
-const NameAppResult = mongoose.model('NameAppResult', NameAppResultSchema);
-module.exports = NameAppResult;
+const QuizAppResult = mongoose.model('QuizAppResult', QuizAppResultSchema);
+module.exports = QuizAppResult;
