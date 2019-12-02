@@ -21,9 +21,10 @@ function imageUpload(imgname, url) {
         nameAppModel.findOneAndUpdate({ url: url }, { $set: { imgurl: response.secure_url } }, { useFindAndModify: false })
             .then(function (output) {
                 console.log(output);
+                fs.unlinkSync(`${__dirname}/../public/images/NameAppImages/${imgname}`);
             })
     })
-    fs.unlinkSync(`${__dirname}/../public/images/NameAppImages/${imgname}`);
+
 }
 
 controller.retrieve = function (req, res) {

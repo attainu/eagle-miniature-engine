@@ -19,9 +19,10 @@ function imageUpload(imgname, url) {
                 QuizAppModel.findOneAndUpdate({ url: url }, { $set: { imgurl: response.secure_url } }, { useFindAndModify: false })
                         .then(function (output) {
                                 console.log(output);
+                                fs.unlinkSync(`${__dirname}/../public/images/QuizAppImages/${imgname}`);
                         })
         })
-        fs.unlinkSync(`${__dirname}/../public/images/QuizAppImages/${imgname}`);
+
 }
 
 Control.quizData = function (req, res) {
