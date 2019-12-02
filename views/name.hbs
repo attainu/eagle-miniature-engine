@@ -31,9 +31,9 @@
         <div class="second d-none"
             style="margin-bottom: 80px;margin-top:25px ;background-color: #a8a8a887;padding-top:20px;height:max-content"
             id="share-btn">
-            <div style="display:inline-block;padding-top:5px;width:113px;">
+            <div style="display:inline-block;width:113px;">
                 <div class="" style="display:inline-block;">
-                    <button type="button" class="btn btn-primary" id="new_name">Try another!</button>
+                    <button type="button" class="btn btn-primary"  id="new_name">Try another!</button>
                 </div>
                 <div class="d-none" id="form" style="display:inline-block;">
                     <form method='get' action="/apps/name">
@@ -46,8 +46,12 @@
                 </div>
 
             </div>
-            {{{frame}}}
+            <div style="float:right;padding-top: 5px;
+    padding-right: 10px;">
+                 {{{frame}}}
             {{/if}}
+            </div>
+           
         </div>
     </center>
     {{#if js}}
