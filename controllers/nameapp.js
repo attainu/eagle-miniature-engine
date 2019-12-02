@@ -16,12 +16,12 @@ cloudinary.config({
 function imageUpload(imgname, url) {
 
     console.log(url)
-    cloudinary.uploader.upload(`${__dirname}/../public/images/NameAppImages/${imgname}`, function (error, response) {
+    cloudinary.uploader.upload(`${__dirname}/../public/images/ShareImages/${imgname}`, function (error, response) {
         console.log(response);
         nameAppModel.findOneAndUpdate({ url: url }, { $set: { imgurl: response.secure_url } }, { useFindAndModify: false })
             .then(function (output) {
                 console.log(output);
-                fs.unlinkSync(`${__dirname}/../public/images/NameAppImages/${imgname}`);
+                fs.unlinkSync(`${__dirname}/../public/images/ShareImages/${imgname}`);
             })
     })
 
@@ -112,7 +112,7 @@ controller.store = function (req, res) {
     // console.log(req.body)
     var base64Data = req.body.imgBase64.replace(/^data:image\/png;base64,/, "");
     var imgStamp = 'name' + Date.now() + '.jpg';
-    fs.writeFile(`${__dirname}/../public/images/NameAppImages/${imgStamp}`, base64Data, 'base64', function (err) {
+    fs.writeFile(`${__dirname}/../public/images/ShareImages/${imgStamp}`, base64Data, 'base64', function (err) {
         if (err) {
             console.log(err);
         }

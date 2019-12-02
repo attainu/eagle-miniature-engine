@@ -14,12 +14,12 @@ cloudinary.config({
 function imageUpload(imgname, url) {
 
         console.log(url)
-        cloudinary.uploader.upload(`${__dirname}/../public/images/QuizAppImages/${imgname}`, function (error, response) {
+        cloudinary.uploader.upload(`${__dirname}/../public/images/ShareImages/${imgname}`, function (error, response) {
                 console.log(response);
                 QuizAppModel.findOneAndUpdate({ url: url }, { $set: { imgurl: response.secure_url } }, { useFindAndModify: false })
                         .then(function (output) {
                                 console.log(output);
-                                fs.unlinkSync(`${__dirname}/../public/images/QuizAppImages/${imgname}`);
+                                fs.unlinkSync(`${__dirname}/../public/images/ShareImages/${imgname}`);
                         })
         })
 
@@ -53,7 +53,7 @@ Control.results = function (req, res) {
                                 name: req.user.firstname,
                                 image: data,
                                 frame: iframe,
-                                js: '<script src="/static/JS/QuizAppScript.js"></script>'
+                                js: '<script src="/static/JS/quizAppScript.js"></script>'
                         });
                 });
         }
@@ -75,6 +75,11 @@ Control.display = function (req, res) {
         QuizAppModel.findOne({ url: uniqueURL }).then((output) => {
                 if (output) {
                         console.log(output);
+                        res.locals.metaTags = {
+                                title: "PUBG Quiz",
+                                description: "You think you know everything about you're favorite game? We doubt it, so help prove us wrong by taking this quiz!",
+                                url: "https://entertaining--apps.herokuapp.com" + req.originalUrl
+                        };
                         res.render('result', {
                                 name: output.username,
                                 result: output.result,
@@ -88,7 +93,7 @@ Control.display = function (req, res) {
 Control.store = function (req, res) {
         var base64Data = req.body.imgBase64.replace(/^data:image\/png;base64,/, "");
         var imgStamp = 'quiz' + Date.now() + '.jpg';
-        fs.writeFile(`${__dirname}/../public/images/QuizAppImages/${imgStamp}`, base64Data, 'base64', function (err) {
+        fs.writeFile(`${__dirname}/../public/images/ShareImages/${imgStamp}`, base64Data, 'base64', function (err) {
                 if (err) {
                         console.log(err);
                 }
