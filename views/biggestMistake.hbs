@@ -1,66 +1,71 @@
-<body >
-        <center>
-           
-            <br>
+<body>
+    <center>
 
-            <div class="ad">
-                <!-- advertisement -->
+        <br>
+
+        <div class="ad">
+            <!-- advertisement -->
+        </div>
+
+        <br>
+        <div class="first d-none" style="margin-bottom: 10px;background-color: #a8a8a887;width:50%">
+            <div class="mb-1">
+                <span class="span7"> Don't miss this out</span>
             </div>
-
-            <br>
-            <div class="first" style="margin-bottom: 10px;background-color: #a8a8a887;width:50%">
-                <div class="mb-1">
-                    <span class="span7"> Don't miss this out</span>
-                </div>
-                <div class="mb-1">
-                    <button id="anothermistake" class="btn btn-primary">Get another</button>
-                </div>
+            <div class="mb-1">
+                <button id="anothermistake" class="btn btn-primary">Get another</button>
             </div>
+        </div>
 
 
-            <div id="pic" >
-                <div class="which">WHICH IS YOUR BIGGEST MISTAKE YOU LOVE DOING OVER AGAIN?</div>
-                <div class="backimg" style="background: url('/static/images/backimg.jpg');">
-                    <div class="userdp">
-                        <table style="width: 100%;border-radius:7px">
-                            <tbody>
-                                <tr style="width: 100%;">
-                                    <td style="width: 50%;">
-                                            <img src="{{dp}}" alt="user dp" width='40%' class="centeralign" style="border: 3px solid;border-radius: 100%;border-color: #736b54;">
-                                    </td>
-                                    <td style="width: 50%;">
-                                        <table>
+        <div class="mt-5" id="pic">
+            <div class="which">WHICH IS YOUR BIGGEST MISTAKE YOU LOVE DOING OVER AGAIN?</div>
+            <div class="backimg" style="background: url('/static/images/backimg.jpg');">
+                <div class="userdp">
+                    <table style="width: 100%;border-radius:7px">
+                        <tbody>
+                            <tr style="width: 100%;">
+                                <td style="width: 50%;">
+                                    <img src="/static/images/facebook.png" alt="user dp" width='40%' class="centeralign"
+                                        style="border: 3px solid;border-radius: 100%;border-color: #736b54;">
+                                </td>
+                                <td style="width: 50%;">
+                                    <table>
                                         <tr>
                                             <td>
-                                                <img src="/static/images/emoji.PNG" alt="emoji" width="40%" class="centeralign">
+                                                <img src="/static/images/emoji.PNG" alt="emoji" width="40%"
+                                                    class="centeralign">
                                             </td>
                                         </tr>
                                         <tr>
                                             <td style="padding: 10%;">
-                                                <span id="mistake"></span>
+                                                <span id="mistake">{{result}}</span>
                                             </td>
                                         </tr>
                                     </table>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table> 
-                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
+        </div>
 
-            <br>
-                <div class="share" style="width:50%">
-                        <div class="mb-2">
-                            <span class="span5"> Don't keep all the fun to yourself
-                        </div>
-                        <div class="mb-2">
-                                <span class="span6">share this with your frnds</span>
-                            </span>
-                        </div>
-                        <div class="mb-2">
-                            {{{iframe}}}
-                        </div>
-                    </div>
-        </center>
-    </body>
+        <br>
+        {{#if js}}
+        <div class="share d-none" style="width:50%" id="share-btn">
+            <div class="mb-2">
+                <span class="span5"> Don't keep all the fun to yourself
+            </div>
+            <div class="mb-2">
+                <span class="span6">share this with your frnds</span>
+                </span>
+            </div>
+            <div class="mb-2 fb-share">
+
+            </div>
+        </div>
+        {{{js}}}
+        {{/if}}
+    </center>
+</body>

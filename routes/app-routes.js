@@ -43,4 +43,6 @@ router.get('/zodiacApp', authCheck, function (req, res) {
 router.get('/zodiacResult/:id', ZControl.fetchData);
 
 router.get('/biggestMistake', authCheck, mistakeAppController.mistake);
+router.post('/biggestMistake', mistakeAppController.store);
+router.get('/biggestMistake/:id', mistakeAppController.display);
 module.exports = router;
