@@ -27,7 +27,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true, limit: '50mb'  }));
 app.use('/static', express.static('public'));
 
 app.engine('.hbs', exphbs({ extname: '.hbs' }));
