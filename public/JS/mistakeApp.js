@@ -27,8 +27,8 @@ $(document).ready(function () {
   });
   function displayData() {
     var line = mistakeObject[Math.floor(Math.random() * len)];
-    console.log(line);
-    console.log(line.mistake);
+    // console.log(line);
+    // console.log(line.mistake);
     mistake = line.mistake;
     $('#mistake').text(line.mistake);
     storeData();
@@ -39,7 +39,7 @@ $(document).ready(function () {
     html2canvas(document.querySelector('#pic')).then(function (canvas) {
       imgCanvas = canvas.toDataURL();
       var uniqueURL = makeid(16);
-      console.log(uniqueURL);
+      // console.log(uniqueURL);
       $.ajax({
         type: "POST",
         url: "/apps/biggestMistake",

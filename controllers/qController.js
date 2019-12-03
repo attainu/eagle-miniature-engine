@@ -13,12 +13,12 @@ cloudinary.config({
 })
 function imageUpload(imgname, url, res) {
 
-        console.log(url)
+        // console.log(url)
         cloudinary.uploader.upload(`${__dirname}/../public/images/ShareImages/${imgname}`, function (error, response) {
-                console.log(response);
+                // console.log(response);
                 QuizAppModel.findOneAndUpdate({ url: url }, { $set: { imgurl: response.secure_url } }, { useFindAndModify: false })
                         .then(function (output) {
-                                console.log(output);
+                                console.log('Success');
                         })
                 res.send('Yes');
                 fs.unlinkSync(`${__dirname}/../public/images/ShareImages/${imgname}`);
@@ -74,7 +74,7 @@ Control.display = function (req, res) {
         var uniqueURL = req.params.id;
         QuizAppModel.findOne({ url: uniqueURL }).then((output) => {
                 if (output) {
-                        console.log(output);
+                        // console.log(output);
                         res.locals.metaTags = {
                                 title: "PUBG Quiz",
                                 description: "You think you know everything about you're favorite game? We doubt it, so help prove us wrong by taking this quiz!",

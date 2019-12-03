@@ -24,7 +24,7 @@ $(document).ready(function () {
                     imgBase64: imgCanvas
                 }
             }).done(function (o) {
-                console.log('saved');
+                // console.log('saved');
                 $("#share-btn").removeClass("d-none");
             });
         })

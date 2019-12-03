@@ -17,7 +17,7 @@ $(document).ready(function () {
                         quote: quotes[i].quote
                     },
                     success: function (res) {
-                        console.log("posted");
+                        console.log("Success");
                     }
                 });
 
@@ -58,26 +58,4 @@ $(document).ready(function () {
         $('input[name=optradio]:checked').prop('checked', false);
         questionsDisplay(questionNumber);
     });
-    // // saveAs(canvas.toDataURL());
-    // var base64ImageContent = imgCanvas.replace(/^data:image\/(png|jpg);base64,/, "");
-    // var blob = base64ToBlob(base64ImageContent, 'image/png');
-    // console.log(Object.keys(blob));
-    // var formData = new FormData();
-    // // formData.append('picture', blob);
-    // formData.append('username', 'Chris');
-    // for (var pair of formData.entries()) {
-    //     console.log(pair[0] + ', ' + pair[1]);
-    // }
-    // $.post("/apps/name", { blob: blob, time: "2pm" });
-    // // $.ajax({
-    // //     url: "/apps/name",
-    // //     type: "POST",
-    // //     data: formData,
-    // //     cache: false,
-    // //     contentType: false,
-    // //     processData: false,
-    // // })
-    // //     .done(function (e) {
-    // //         console.log('done!');
-    // //     });
 });

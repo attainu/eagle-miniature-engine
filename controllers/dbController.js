@@ -33,9 +33,6 @@ dbController.retrieve = function (req, res) {
                 }
             })
         res.redirect('/apps/quotes/' + uniqueURL);
-        // return res.render('quotes', {
-        //     quote: result[randomNumber].quote
-        // });
     });
 
 
@@ -61,10 +58,10 @@ dbController.display = function (req, res) {
 dbController.post = function (req, res) {
     var uniqueURL = req.params.id;
     var quote = req.body.quote;
-    console.log(quote);
+    // console.log(quote); 
     quoteResults.findOneAndUpdate({ url: uniqueURL }, { $set: { quote: quote } }, { useFindAndModify: false })
         .then(function (output) {
-            console.log(output.quote);
+            console.log('Success');
         })
 }
 

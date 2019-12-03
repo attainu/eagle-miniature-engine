@@ -13,17 +13,17 @@ cloudinary.config({
 
 var download = function (uri, filename, callback) {
         request.head(uri, function (err, res, body) {
-                console.log('content-type:', res.headers['content-type']);
-                console.log('content-length:', res.headers['content-length']);
+                // console.log('content-type:', res.headers['content-type']);
+                // console.log('content-length:', res.headers['content-length']);
 
                 request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
         });
 };
 function imageUpload(imgname, req, res) {
 
-        console.log(imgname)
+        // console.log(imgname)
         cloudinary.uploader.upload(`${__dirname}/../public/images/ShareImages/${imgname}`, function (error, response) {
-                console.log(response);
+                // console.log(response);
                 MistakeAppModel.findOne({ url: req.body.uniqueURL }).then((result) => {
                         if (!result) {
                                 const newResult = {
@@ -42,9 +42,9 @@ function imageUpload(imgname, req, res) {
 }
 Control.mistake = function (req, res) {
         var dp = req.user.image;
-        console.log(req.user.image);
+        // console.log(req.user.image);
         download(req.user.image, `${__dirname}/../public/images/facebook.png`, function () {
-                console.log('done');
+                // console.log('done');
                 res.locals.metaTags = {
                         title: "Mistakes",
                         description: "Some of the mistakes we all have done. You're not alone for doing it.",
@@ -75,7 +75,7 @@ Control.display = function (req, res) {
         })
 }
 Control.store = function (req, res) {
-        console.log(req.body);
+        // console.log(req.body);
         var base64Data = req.body.imgBase64.replace(/^data:image\/png;base64,/, "");
         var imgStamp = 'mistake' + Date.now() + '.jpg';
         fs.writeFile(`${__dirname}/../public/images/ShareImages/${imgStamp}`, base64Data, 'base64', function (err) {

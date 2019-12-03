@@ -15,12 +15,12 @@ cloudinary.config({
 })
 function imageUpload(imgname, url, res) {
 
-    console.log(url)
+    // console.log(url)
     cloudinary.uploader.upload(`${__dirname}/../public/images/ShareImages/${imgname}`, function (error, response) {
-        console.log(response);
+        // console.log(response);
         nameAppModel.findOneAndUpdate({ url: url }, { $set: { imgurl: response.secure_url } }, { useFindAndModify: false })
             .then(function (output) {
-                console.log(output);
+                console.log('Success');
             })
         res.send('Yes');
         fs.unlinkSync(`${__dirname}/../public/images/ShareImages/${imgname}`);
@@ -94,7 +94,7 @@ controller.display = function (req, res) {
                     outputs.adj = array[i];
                     out.push(outputs);
                 }
-                console.log(output);
+                // console.log(output);
                 res.locals.metaTags = {
                     title: "What's in a Name?",
                     description: "Find out some cool adjectives for you name!!",
