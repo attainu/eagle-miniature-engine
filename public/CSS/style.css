@@ -9,11 +9,11 @@
   font-family: sans-serif;
 }
 
-
 .header {
   
   position: fixed;
   width: 100%;
+  z-index: 300;
 }
 
 .intro {
@@ -211,8 +211,7 @@
 }
 
 .zodiacDIV{
-  background-image: linear-gradient(to top, 
-  #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);                       
+  background-image: linear-gradient( 179.3deg,  rgba(233,10,130,1) -0.1%, rgba(12,21,139,1) 96.7% );                       
 }
 
 .zodiacA {
