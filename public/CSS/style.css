@@ -1,0 +1,239 @@
+.fiotive {
+  background-color: #ffffff;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.navbar-light .navbar-brand {
+  color: white;
+  font-family: sans-serif;
+}
+
+.header {
+  
+  position: fixed;
+  width: 100%;
+  z-index: 300;
+}
+
+.intro {
+  font-size: 17px;
+  color: rebeccapurple;
+}
+
+.homeimage {
+  border-radius: 13px;
+}
+
+.footer {
+  
+  background: whitesmoke;
+  height: 62px;
+  padding-top: 8px;
+  font-size: x-small;
+}
+
+.span {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.span1 {
+  text-decoration: underline;
+}
+
+.pubg {
+  border-radius: 12px;
+  border-style: solid;
+  box-shadow: -1px 0px 18px 0px #4e4e4e36;
+  border-width: 1px;
+}
+
+.welcome {
+  margin-top: -20px;
+  font-weight: 900;
+  margin-bottom: -26px;
+}
+
+.motivation {
+  border-radius: 12px;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: -1px 0px 18px 0px #4e4e4e36;
+}
+
+.motivateLine {
+  margin-top: 3px;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.pubgLine {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.span2 {
+  text-decoration: underline;
+}
+
+.span3 {
+  font-weight: 700;
+  background-color: #f7f7f7;
+  border-radius: 11px;
+  padding: 1px;
+  border-style: dotted;
+}
+
+.result {
+  margin-bottom: 34px;
+  color: #27ff00;
+  font-size: xx-large;
+  font-family: serif;
+  border-radius: 5px;
+  width: 80%;
+  box-shadow: -1px 0px 18px 0px #4e4e4e36;
+  background-color: #fcfcfc;
+}
+
+.span5 {
+  
+  font-variant: small-caps;
+  border-radius: 15px;
+  color: #173e3e;
+}
+
+
+
+.share {
+  font-family:'oxygen';
+  border-radius: 5px;
+  width: 80%;
+  box-shadow: -1px 0px 18px 0px #4e4e4e36;
+  background-color: #a8a8a887;
+ 
+  margin: 30px;
+  padding: 13px;
+  margin-top:20px
+}
+
+.pubgapp {
+  border-radius: 5px;
+  width: 60%;
+  box-shadow: -1px 0px 18px 0px #4e4e4e36;
+  background-color: #fcfcfc;
+}
+
+.quote {
+  border-radius: 5px;
+  width: 70%;
+  font-size: 23px;
+  font-weight: 350;
+  padding: 33px;
+ 
+}
+
+.span7 {
+  font-weight: 900;
+}
+
+.span8 {
+  font-variant-caps: small-caps;
+}
+
+.span9 {
+  color: #e41f00;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.span10 {
+  border-radius: 11px;
+  font-family: serif;
+}
+
+.first {
+  margin: 43px;
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: -1px 0px 18px 0px #4e4e4e36;
+  width: 81%;
+  padding: 9px 0px 9px 0px;
+}
+
+.second {
+  width: 81%;
+  box-shadow: -1px 0px 18px 0px #4e4e4e36;
+  margin: 43px;
+  padding: 13px;
+  border-radius: 11px;
+}
+
+.app1 {
+  padding: 10px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  background: #6f6f6f26;
+}
+
+.app2 {
+  padding: 10px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  background: #6f6f6f26;
+}
+
+.quotepage {
+  width: fit-content;
+}
+
+.which {
+  background: #2d3142;
+  color: white;
+  padding: 12px;
+  font-family: sans-serif;
+}
+#pic {
+  width: 45%;
+}
+.centeralign {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+}
+#mistake {
+  font-weight: 700;
+  font-family: sans-serif;
+
+}
+
+.zodiacDIV{
+  background-image: linear-gradient( 179.3deg,  rgba(233,10,130,1) -0.1%, rgba(12,21,139,1) 96.7% );                       
+}
+
+.zodiacA {
+  text-decoration: none !important
+}
+
+.zodiacIMG{
+  width: 50px;
+  height: 50px;
+}
+
+.zodiacTEXT {
+  color: #fff;
+  font-family: Comic Sans MS;
+}
+
+.zodiacZOOM {
+  background-color: none;
+  transition: transform .2s;
+  margin: 0 auto;
+}
+
+.zodiacZOOM:hover {
+  transform: scale(1.5);
+}

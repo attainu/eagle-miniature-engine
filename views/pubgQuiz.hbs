@@ -1,0 +1,36 @@
+<body class="pubgquiz">
+    <br><br>
+    <div class="ad">
+        <!--  ad -->
+    </div>
+
+    <div class="container w-70 rounded"
+        style="margin-top: 120px;background-image: url('/static/images/pubg.jpg'); background-repeat: no-repeat;">
+        <br>
+        <div>
+            <h4 class="text-left pl-5" style="color: antiquewhite;" id="ques"></h4>
+            <h1 class="diaplay-4"></h1>
+            <div class="radio mx-3 ml-5">
+                <label><input type="radio" name="optradio" value="1"><span class="pl-2 text-white"
+                        id="opt1"></span></label>
+            </div>
+            <div class="radio mx-3 ml-5">
+                <label><input type="radio" name="optradio" value="2"><span class="pl-2 text-white"
+                        id="opt2"></span></label>
+            </div>
+            <div class="radio mx-3 ml-5">
+                <label><input type="radio" name="optradio" value="3"><span class="pl-2 text-white"
+                        id="opt3"></span></label>
+            </div>
+            <div class="radio mx-3 ml-5">
+                <label><input type="radio" name="optradio" value="4"><span class="pl-2 text-white"
+                        id="opt4"></span></label>
+            </div>
+            <button type="button" class="btn btn-primary my-3 ml-5" id="quiz-btn">Submit</button>
+        </div>
+        <form action="/apps/pubgQuiz" method="POST">
+            <input type="text" name="correctAnswer" class="d-none" id="ans">
+            <button type="submit" id="send" class="d-none"></button>
+        </form>
+    </div>
+</body>

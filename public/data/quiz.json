@@ -1,0 +1,60 @@
+[
+        {
+                "question": "Which one of these is not a Map in PUBG?",
+                "option": ["Vikendi", "Sanhok", "Erangel", "Jhumri Telaiya"],
+                "answer": "Jhumri Telaiya"
+        },
+        {
+                "question": "A player is awarded as which of these ranks in PUBG?",
+                "option": ["Diamond", "Silver", "Ace", "All of these"],
+                "answer": "All of these"
+        },
+        {
+                "question": "Which among these games, do similar to PUBG?",
+                "option": ["Call Of Duty", "Subway Surfers", "Candy Crush Saga", "Need For Speed"],
+                "answer": "Call Of Duty"
+        },
+        {
+                "question": "This game is developed by which of the following company?",
+                "option": ["Activision", "Ubisoft", "Bluehole","EA Sports"],
+                "answer": "Bluehole"
+        },
+        {
+                "question": "What is the maximum number of players can enter into a squad?",
+                "option": ["5", "4", "6", "2"],
+                "answer": "4"
+        },
+        {
+                "question": "What is the Red Zone?",
+                "option": ["Allows you to teleport yourself to any location on the map", 
+                        "An area in which bombs randomly drop from the sky", 
+                        "An area in which your HP goes back to 100 automatically", 
+                        "A safe area in which you can’t be killed"],
+                "answer": "An area in which bombs randomly drop from the sky"
+        },
+        {
+                "question": "Do players outside the circular playzone die instantly?",
+                "option": ["you are dead right their", 
+                        "you gain more health", 
+                        "Health decreases gradually, leads to death", 
+                        "I never been to the outside of playzone"],
+                "answer": "Health decreases gradually, leads to death" 
+        },
+        {
+                "question": "What’s the maximum number of players that can participate in a match?",
+                "option": ["100", "50", "150", "90"],
+                "answer":"100"
+        },
+        {
+                "question": "Which one of these will heal you back to 100% ?",
+                "option": ["Bandages", "Adrenaline Syringe", "Med-kit", "First-Aid Kit"],
+                "answer":"First-Aid Kit"
+        },
+        {
+                "question": "Airdrops in the game are made by…?",
+                "option": ["A zeppelin", "A helicopter", "An airplane", "A drone"],
+                "answer":"An airplane"
+        }
+        
+        
+]

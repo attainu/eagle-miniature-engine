@@ -1,0 +1,35 @@
+<body class="pubgquiz">
+    <center>
+
+        <br>
+        <div class="ad">
+            <!--  ad -->
+        </div>
+        <br>
+
+        <div class="container my-5 shadow-lg w-50 rounded text-center"
+            style="background-image: url('/static/images/plexus.jpg');height:300px;" id="shares">
+            <h1 class="text-center" style="color: azure;">Hey, {{this.name}}</h1>
+            <h3 class=" chgImg" style="color: azure;padding-top:20px">Your score is {{result}} out of 100</h3>
+            <img src="{{image}}" style="height:100px;width:100px">
+            <br><br>
+
+        </div>
+
+        {{#if frame}}
+        <div class="share d-none" style="font-family: oxygen;" id="share-btn">
+            <div class="mb-2">
+                <span class="span5"> Don't keep all the fun to yourself
+            </div>
+            <div class="mb-2">
+                <span class="span6">share this with your friends</span>
+                </span>
+            </div>
+            {{{frame}}}
+        </div>
+        {{/if}}
+    </center>
+    {{#if js}}
+    {{{js}}}
+    {{/if}}
+</body>

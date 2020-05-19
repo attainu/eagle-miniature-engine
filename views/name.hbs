@@ -1,0 +1,73 @@
+<body class="nameApp">
+    <center>
+        <br>
+        <div class="ad">
+            <!-- advertisement -->
+        </div>
+        <br>
+        <br>
+        <div class="result pt-4 share" id="tables" style="font-family: oxygen;font-size:medium">
+            <h1 class="text-center">Hey, {{this.name}}</h1>
+            <p>Here are the words which best describes you</p>
+            <hr style="height:5px;">
+            <table class="table table-borderless text-white">
+                <tbody class="ml-5">
+                    {{#each output}}
+                    <tr class="mx-auto">
+                        <th scope="row" class='align-middle'>
+                            <h3 class="float-right text-uppercase">{{this.char}} -</h3>
+                        </th>
+                        <th scope="row" class="float-left">
+                            <h3>{{this.adj}}</h3>
+                        </th>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <br>
+        </div>
+
+        {{#if frame}}
+        <div class="second d-none"
+            style="margin-bottom: 80px;margin-top:25px ;background-color: #a8a8a887;padding-top:20px;height:max-content"
+            id="share-btn">
+             <div style="display:inline-block;">
+                    {{{frame}}}
+                    <br>
+                    <button type="button" class="btn btn-primary" id="new_name">Try another!</button>
+                    <div class="d-none" id="form">
+                    <form class="form-group" method='get' action="/apps/name" style="display: inline-block;">
+                            <input class="form-control mt-1 mb-1" style="width: 150px;margin: 0 auto;"type="text" name="newName" required>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+            </div>           
+
+        </div>
+        {{/if}}
+    </center>
+    {{#if js}}
+    {{{js}}}
+    {{/if}}
+</body>
+<style>
+    td {
+        padding-top: 5px;
+    }
+
+    .result {
+        color: white;
+        height: 100%;
+        background: url("/static/images/namebk.jpg")no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #tables {
+        margin: auto;
+        color: white;
+    }
+
+    input {
+        padding: 4px;
+    }
+</style>
